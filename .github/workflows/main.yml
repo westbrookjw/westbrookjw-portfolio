@@ -29,7 +29,6 @@ jobs:
         aws s3 sync ./ s3://${{ secrets.AWS_S3_BUCKET }} \
           --exclude ".git/*" \
           --exclude ".github/*" \
-          --exclude "*" \
           --include "index.html" \
           --delete
 
