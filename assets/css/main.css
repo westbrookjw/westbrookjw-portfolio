@@ -2499,12 +2499,13 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0.75em;
 		padding-left: 1em;
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			  margin-bottom: 0.75em;  /* adjust for consistent spacing */
+  				line-height: 1.2;
 		}
 
 		ul.alt {
