@@ -67,26 +67,26 @@
 						<li><strong>Step 4:</strong> Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>
 						<li><strong>Step 1:</strong> Go to Permissions. Add the following code to your Bucket policy:</li>
 						<ul>
-							<p><code>{
-    "Version": "2008-10-17",
-    "Id": "PolicyForCloudFrontPrivateContent",
-    "Statement": [
-        {
-            "Sid": "AllowCloudFrontServicePrincipal",
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "cloudfront.amazonaws.com"
-            },
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::westbrookjw-portfolio/*",
-            "Condition": {
-                "StringEquals": {
-                    "AWS:SourceArn": "arn:aws:cloudfront::992382744348:distribution/YOUR-CLOUDFRONT-DISTRIBUTION-ID"
-                }
-            }
-        }
-    ]
-}</code></p>
+							<li><code>{
+								"Version": "2008-10-17",
+								"Id": "PolicyForCloudFrontPrivateContent",
+								"Statement": [
+									{
+										"Sid": "AllowCloudFrontServicePrincipal",
+										"Effect": "Allow",
+										"Principal": {
+											"Service": "cloudfront.amazonaws.com"
+										},
+										"Action": "s3:GetObject",
+										"Resource": "arn:aws:s3:::westbrookjw-portfolio/*",
+										"Condition": {
+											"StringEquals": {
+												"AWS:SourceArn": "arn:aws:cloudfront::992382744348:distribution/YOUR-CLOUDFRONT-DISTRIBUTION-ID"
+											}
+										}
+									}
+								]
+								}</code></li>
 						</ul>
 						<li><strong>Step 2:</strong> View all services. Select S3. Create bucket.</li>
 						<li><strong>Step 3:</strong> Name bucket and leave the rest as is.</li>
