@@ -68,26 +68,27 @@
 						<li><strong>Step 1:</strong> Go to Permissions. Add the following code to your Bucket policy:</li>
 						
 						<div style="margin-top: 0.5em;">
-  							<pre><p>{
-								"Version": "2008-10-17",
-								"Id": "PolicyForCloudFrontPrivateContent",
-								"Statement": [
-									{
-										"Sid": "AllowCloudFrontServicePrincipal",
-										"Effect": "Allow",
-										"Principal": {
-											"Service": "cloudfront.amazonaws.com"
-										},
-										"Action": "s3:GetObject",
-										"Resource": "arn:aws:s3:::westbrookjw-portfolio/*",
-										"Condition": {
-											"StringEquals": {
-												"AWS:SourceArn": "arn:aws:cloudfront::your-cloudfront-arn"
-											}
-										}
-									}
-								]
-								}
+  							<pre><p>
+{
+"Version": "2008-10-17",
+	"Id": "PolicyForCloudFrontPrivateContent",
+	"Statement": [
+	{
+		"Sid": "AllowCloudFrontServicePrincipal",
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "cloudfront.amazonaws.com"
+			},
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::westbrookjw-portfolio/*",
+			"Condition": {
+			"StringEquals": {
+			"AWS:SourceArn": "arn:aws:cloudfront::your-cloudfront-arn"
+			}
+		}
+	}
+]
+}
 								</p><pre>
 							<div style="margin-top: 0.5em;">
 
