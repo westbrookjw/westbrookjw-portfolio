@@ -65,55 +65,37 @@
 						<li>View all services. Select S3. Create bucket.</li>
 						<li>Name bucket and leave the rest as is.</li>
 						<li>Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>
-						<li>Go to Permissions. Add the following code to your Bucket policy:</li>
 								</ol>
-  							<pre><p>
-{
-"Version": "2008-10-17",
-	"Id": "PolicyForCloudFrontPrivateContent",
-	"Statement": [
-	{
-		"Sid": "AllowCloudFrontServicePrincipal",
-		"Effect": "Allow",
-		"Principal": {
-			"Service": "cloudfront.amazonaws.com"
-			},
-			"Action": "s3:GetObject",
-			"Resource": "arn:aws:s3:::westbrookjw-portfolio/*",
-			"Condition": {
-			"StringEquals": {
-			"AWS:SourceArn": "arn:aws:cloudfront::your-cloudfront-arn"
-			}
-		}
-	}
-]
-}
-								</p></pre>
 
-					</section>
+							</section>
 
-						<section id="CloudFlare">
+						<section id="CloudFront">
   							<h2>CloudFront Setup</h2>
-  							<p>This guide will walk you through everything you need to know.</p>
+  							<p>How to setup CloudFront</p>
 
   							 <ol>
-						<li><strong>Step 1:</strong> Create your account by clicking <a href="#signup">here</a>.</li>
-						<li><strong>Step 2:</strong> Verify your email address via the link we send you.</li>
-						<li><strong>Step 3:</strong> Log in and customize your profile.</li>
-						<li><strong>Step 4:</strong> Watch the <a href="#intro-video">intro video</a>.</li>
+						<li>Go to CloudFront then Distributions. Select Create distribution.</li>
+						<li>Name distribution as you would like and then add your Domain if you have one. If not wait until after next step.</li>
+						<li>Select "Browse S3" and then select your bucket. Press "Next".</li>
+						<li>Go to "Origins" then select your "Origin" and press "Edit".</li>
+						<li>Leave all as is and click "Copy policy".</li>
+						<li>Go back to "S3", then "your bucket", then "Permissios" and apply this policy to your "Bucket policy".</li>
+						<li>Enabling WAF is optional.</li>
+						<li>Enabling WAF is optional.</li>
+						<li>Enabling WAF is optional.</li>
 							</ol>
 
 					</section>
 
-						<section id="CloudFront">
-  							<h2>CloudFront Setup</h2>
-  							<p>This guide will walk you through everything you need to know.</p>
+					<section id="CloudFlare">
+  							<h2>CloudFlare Setup</h2>
+  							<p>How to setup a CloudFlare Domain.</p>
 
   							 <ol>
-						<li><strong>Step 1:</strong> Create your account by clicking <a href="#signup">here</a>.</li>
-						<li><strong>Step 2:</strong> Verify your email address via the link we send you.</li>
-						<li><strong>Step 3:</strong> Log in and customize your profile.</li>
-						<li><strong>Step 4:</strong> Watch the <a href="#intro-video">intro video</a>.</li>
+						<li>Go to CloudFront then Distributions. Select Create distribution.</li>
+						<li>Name distribution as you would like and then add your Domain</li>
+						<li>Log in and customize your profile.</li>
+						<li>Watch the</li>
 							</ol>
 
 					</section>
