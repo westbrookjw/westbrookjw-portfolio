@@ -31,7 +31,7 @@
 			<section id="wrapper">
 				<header>
 					<div class="inner">
-						<h2>Portfolio Website</h2>
+						<h2>AWS S3 + CloudFront Static Website Hosting</h2>
 						<p>End-to-end cloud-based deployment using AWS and Cloudflare</p>
 					</div>
 				</header>
@@ -41,7 +41,7 @@
 
 						<section id="overview">
 							<h3 class="major">Project Overview</h3>
-							<p>This project showcases a professional static portfolio website deployed using AWS S3 for hosting, CloudFront for global content delivery and HTTPS, and Cloudflare for DNS management and performance enhancement.</p>
+							<p>Designed and implemented a static website hosting solution using Amazon S3 and CloudFront. The process involved provisioning an S3 bucket for static file storage, enabling static website hosting, configuring bucket permissions securely via Origin Access Control (OAC), and deploying a CloudFront distribution for global content delivery with low latency and HTTPS support. The setup also included optional DNS integration via Cloudflare for custom domain routing.</p>
 						</section>
 
 						<section id="architecture">
@@ -54,47 +54,66 @@
 							</ul>
 						</section>
 
-						<section id="s3 setup">
+						<section id="Instructions"></section>
   							<h2>S3 Bucket Setup</h2>
   							<p>How to setup an S3 Bucket</p>
 
   							 <ol>
 						<li>Create AWS account.</li>
-						<li>View all services. Select S3. Create bucket.</li>
-						<li>Name bucket and leave the rest as is.</li>
-						<li>Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>
-								</ol>
-
-							</section>
-
-						<section id="CloudFront">
-  							<h2>CloudFront Setup</h2>
-  							<p>How to setup CloudFront</p>
-
-  							 <ol>
-						<li>Go to CloudFront then Distributions. Select Create distribution.</li>
-						<li>Name distribution as you would like and then add your Domain if you have one. If not wait until after next step.</li>
-						<li>Select "Browse S3" and then select your bucket. Press "Next".</li>
-						<li>Go to "Origins" then select your "Origin" and press "Edit".</li>
+						<li>View all services → Select S3 → Create bucket.</li>
+						<li>Name the bucket (e.g., your-site-name) → leave the rest as default unless you need versioning or encryption.</li>
+						<li>Go to the bucket’s “Properties” tab.</li>
+								<ul>
+									<li>Scroll to “Static website hosting”</li>
+									<li>Enable it</li>
+									<li>Specify index.html as the home page</li>
+									<li>Optionally set error.html for error documents</li>
+								</ul>
+						<li>Go to CloudFront → Distributions → Create Distribution.</li>
+						<li>In the Origin settings:</li>
+							<ul>
+									<li>Choose “Browse S3”</li>
+									<li>Select the bucket you just created</li>
+									<li>Click “Next”</li>
+								</ul>
+						<li>In the Distribution Settings:</li>
+						<ul>
+									<li>Leave most defaults</li>
+									<li>Optionally set a custom domain (CNAME) if you have one</li>
+									<li>Note: If using a domain, you’ll later need to update DNS records in your DNS provider (e.g. Cloudflare)</li>
+								</ul>
+						<li>Once the distribution is created, go to “Origins and Origin Groups” tab</li>
+							<ul>
+									<li>Select your origin</li>
+									<li>Click “Edit”</li>
+								</ul>
+						<li>Scroll to “Origin access control settings”</li>
+							<ul>
+									<li>Ensure Origin access control (OAC) is enabled</li>
+									<li>Copy the S3 bucket policy snippet provided</li>
+								</ul>
+						<li>Go back to S3 → Your bucket → Permissions tab</li>
+						<ul>
+									<li>Click “Bucket policy”</li>
+									<li>Paste the policy you copied from CloudFront</li>
+									<li>Save</li>
+								</ul>
+						<li>In S3 Permissions, ensure Block all public access is OFF.</li>
+						<li>In the Bucket Policy, make sure it allows only CloudFront (via the OAC) to access the content.</li>
+						<li>Wait for CloudFront to deploy (~10-15 min).</li>
+						<li>Access the distribution’s domain name (e.g., d1234.cloudfront.net) to verify your static website is working.</li>
+						<li>(Optional) Set up a custom domain with HTTPS:</li>
+								<ul>
+									<li>In Route 53 or Cloudflare, point your domain to your CloudFront distribution using a CNAME</li>
+									<li>Add the custom domain in your CloudFront settings</li>
+									<li>Request a free certificate in AWS Certificate Manager</li>
+									<li>Attach the certificate to your distribution</li>
+									<li>Deploy changes and wait for propagation</li>
+								</ul>
 						<li>Leave all as is and click "Copy policy".</li>
-						<li>Go back to "S3", then "your bucket", then "Permissios" and apply this policy to your "Bucket policy".</li>
 							</ol>
 
-					</section>
-
-					<section id="CloudFlare">
-  							<h2>CloudFlare Setup</h2>
-  							<p>How to setup a CloudFlare Domain.</p>
-
-  							 <ol>
-						<li>Go to CloudFront then Distributions. Select Create distribution.</li>
-						<li>Name distribution as you would like and then add your Domain</li>
-						<li>Log in and customize your profile.</li>
-						<li>Watch the</li>
-							</ol>
-
-					</section>
-
+						</section>
 					</div>
 				</div>
                 
