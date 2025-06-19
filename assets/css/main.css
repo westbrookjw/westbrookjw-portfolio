@@ -2492,10 +2492,11 @@ input, select, textarea {
 }
 
 .image-row img {
-  width: 500px;  /* or your preferred size */
+  width: 100%;  /* or your preferred size */
+  max-width: 600px;
   height: auto;
-  border-radius: 8px;
-  margin: 0;
+  padding: 0.25em;
+  box-sizing: border-box;
 }
 
 /* List */
