@@ -2485,6 +2485,19 @@ input, select, textarea {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.image-row {
+  display: flex;
+  justify-content: left; /* or space-between, flex-start, etc. */
+  align-items: center;
+}
+
+.image-row img {
+  width: 500px;  /* or your preferred size */
+  height: auto;
+  border-radius: 8px;
+  margin: 0;
+}
+
 /* List */
 
 	ol {
