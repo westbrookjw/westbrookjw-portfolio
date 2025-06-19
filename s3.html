@@ -66,8 +66,9 @@
 						<li><strong>Step 3:</strong> Name bucket and leave the rest as is.</li>
 						<li><strong>Step 4:</strong> Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>
 						<li><strong>Step 1:</strong> Go to Permissions. Add the following code to your Bucket policy:</li>
-						<ul>
-							<li><code>{
+						
+						<div style="margin-top: 0.5em;">
+  							<pre><code>{
 								"Version": "2008-10-17",
 								"Id": "PolicyForCloudFrontPrivateContent",
 								"Statement": [
@@ -86,8 +87,9 @@
 										}
 									}
 								]
-								}</code></li>
-						</ul>
+								}
+							<div style="margin-top: 0.5em;">
+  							<pre><code>
 						<li><strong>Step 2:</strong> View all services. Select S3. Create bucket.</li>
 						<li><strong>Step 3:</strong> Name bucket and leave the rest as is.</li>
 						<li><strong>Step 4:</strong> Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>	
