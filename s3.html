@@ -79,10 +79,10 @@
 											"Service": "cloudfront.amazonaws.com"
 										},
 										"Action": "s3:GetObject",
-										"Resource": "arn:aws:s3:::westbrookjw-portfolio/*",
+										"Resource": "arn:aws:s3:::your-bucket-name/*",
 										"Condition": {
 											"StringEquals": {
-												"AWS:SourceArn": "arn:aws:cloudfront::992382744348:distribution/YOUR-CLOUDFRONT-DISTRIBUTION-ID"
+												"AWS:SourceArn": "arn:aws:cloudfront::your-cloudfront-arn"
 											}
 										}
 									}
@@ -90,7 +90,7 @@
 								}
 								<pre></code>
 							<div style="margin-top: 0.5em;">
-								
+
 						<li><strong>Step 2:</strong> View all services. Select S3. Create bucket.</li>
 						<li><strong>Step 3:</strong> Name bucket and leave the rest as is.</li>
 						<li><strong>Step 4:</strong> Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>	
