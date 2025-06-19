@@ -2499,6 +2499,12 @@ input, select, textarea {
   box-sizing: border-box;
 }
 
+.responsive-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
 /* List */
 
 	ol {
