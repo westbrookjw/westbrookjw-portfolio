@@ -58,13 +58,39 @@
 
 						<section id="s3 setup">
   							<h2>S3 Bucket Setup</h2>
-  							<p>This guide will walk you through everything you need to know.</p>
+  							<p>How to setup an S3 Bucket</p>
 
   							 <ol>
-						<li><strong>Step 1:</strong> Create your account by clicking <a href="#signup">here</a>.</li>
-						<li><strong>Step 2:</strong> Verify your email address via the link we send you.</li>
-						<li><strong>Step 3:</strong> Log in and customize your profile.</li>
-						<li><strong>Step 4:</strong> Watch the <a href="#intro-video">intro video</a>.</li>
+						<li><strong>Step 1:</strong> Create AWS account.</li>
+						<li><strong>Step 2:</strong> View all services. Select S3. Create bucket.</li>
+						<li><strong>Step 3:</strong> Name bucket and leave the rest as is.</li>
+						<li><strong>Step 4:</strong> Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>
+						<li><strong>Step 1:</strong> Go to Permissions. Add the following code to your Bucket policy:</li>
+						<ul>
+							<code>{
+    "Version": "2008-10-17",
+    "Id": "PolicyForCloudFrontPrivateContent",
+    "Statement": [
+        {
+            "Sid": "AllowCloudFrontServicePrincipal",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "cloudfront.amazonaws.com"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::westbrookjw-portfolio/*",
+            "Condition": {
+                "StringEquals": {
+                    "AWS:SourceArn": "arn:aws:cloudfront::992382744348:distribution/YOUR-CLOUDFRONT-DISTRIBUTION-ID"
+                }
+            }
+        }
+    ]
+}</code>
+						</ul>
+						<li><strong>Step 2:</strong> View all services. Select S3. Create bucket.</li>
+						<li><strong>Step 3:</strong> Name bucket and leave the rest as is.</li>
+						<li><strong>Step 4:</strong> Go to Properties. Enable Static website hosting. Specifiy the home page of the website. Leave the rest as is.</li>	
 							</ol>
 
 					</section>
