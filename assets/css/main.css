@@ -110,7 +110,6 @@ input, select, textarea {
 						linear-gradient(45deg, #a0c4ff 15%, #0A192F 85%);
 	}
 
-
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
@@ -2419,21 +2418,29 @@ input, select, textarea {
 				width: 100%;
 			}
 
-			.image-center-wrapper {
+			.profile-image {
 			display: flex;
-			justify-content: center;  /* centers horizontally */
-			align-items: center;      /* centers vertically */
-			height: 20vh;            /* fills the screen vertically */
+			justify-content: center;
+			align-items: center;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
 			}
 
+			.profile-image img {
+			width: 180px;
+			height: 180px;
+			object-fit: cover;
+			object-position: top center;
+			border-radius: 50%;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			}
 
-			.profile-img {
-				width: 200px;           /* or whatever fits your layout */
-				height: 200px;
-				object-fit: cover;
-				object-position: top center;
-				border-radius: 50%;
-				display: block;
+			/* Optional for mobile responsiveness */
+			@media only screen and (max-width: 600px) {
+			.profile-image img {
+				width: 120px;
+				height: 120px;
+			}
 			}
 
 /* List */
