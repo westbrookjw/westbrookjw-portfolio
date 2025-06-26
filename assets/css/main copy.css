@@ -99,17 +99,12 @@ input, select, textarea {
 	}
 
 	body {
-	background-color: #a0c4ff;
-	background-image: url("images/overlay.png"),
-						-moz-linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
-	background-image: url("images/overlay.png"),
-						-webkit-linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
-	background-image: url("images/overlay.png"),
-						-ms-linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
-	background-image: url("images/overlay.png"),
-						linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
+		background-color: #935d8c;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 	}
-
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -2417,23 +2412,6 @@ input, select, textarea {
 
 			.image.main img {
 				width: 100%;
-			}
-
-			.image-center-wrapper {
-			display: flex;
-			justify-content: center;  /* centers horizontally */
-			align-items: center;      /* centers vertically */
-			height: 20vh;            /* fills the screen vertically */
-			}
-
-
-			.profile-img {
-			width: 175px;          /* adjust size */
-			height: auto;         /* make height equal to width for circle */
-			border-radius: 50%;    /* makes it round */
-			object-fit: cover;     /* ensures image doesn't distort */
-			display: flex;
-			position: center;
 			}
 
 /* List */
