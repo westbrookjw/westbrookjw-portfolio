@@ -101,13 +101,13 @@ input, select, textarea {
 	body {
 	background-color: #a0c4ff;
 	background-image: url("images/overlay.png"),
-						-moz-linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
+						-moz-linear-gradient(45deg, #a0c4ff 15%, #0A192F 85%);
 	background-image: url("images/overlay.png"),
-						-webkit-linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
+						-webkit-linear-gradient(45deg, #a0c4ff 15%, #0A192F 85%);
 	background-image: url("images/overlay.png"),
-						-ms-linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
+						-ms-linear-gradient(45deg, #a0c4ff 15%, #0A192F 85%);
 	background-image: url("images/overlay.png"),
-						linear-gradient(45deg, #1e3a8a 15%, #a0c4ff 85%);
+						linear-gradient(45deg, #a0c4ff 15%, #0A192F 85%);
 	}
 
 
@@ -2428,12 +2428,12 @@ input, select, textarea {
 
 
 			.profile-img {
-			width: 175px;          /* adjust size */
-			height: auto;         /* make height equal to width for circle */
-			border-radius: 50%;    /* makes it round */
-			object-fit: cover;     /* ensures image doesn't distort */
-			display: flex;
-			position: center;
+				width: 200px;           /* or whatever fits your layout */
+				height: 200px;
+				object-fit: cover;
+				object-position: top center;
+				border-radius: 50%;
+				display: block;
 			}
 
 /* List */
