@@ -2427,8 +2427,8 @@ input, select, textarea {
 			}
 
 			.profile-image img {
-			width: 180px;
-			height: 180px;
+			width: 250px;
+			height: 250px;
 			object-fit: cover;
 			object-position: top center;
 			border-radius: 50%;
@@ -2441,6 +2441,10 @@ input, select, textarea {
 				width: 120px;
 				height: 120px;
 			}
+			}
+
+			.project-icon {
+				object-fit: cover;
 			}
 
 /* List */
@@ -3709,6 +3713,13 @@ input, select, textarea {
 		}
 
 /* Footer */
+
+	footer {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* optional: vertically center if height is set */
+    flex-direction: column; /* optional: stack items vertically */
+}
 
 	#footer {
 		display: -moz-flex;
