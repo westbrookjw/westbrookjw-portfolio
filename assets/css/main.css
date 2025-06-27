@@ -2495,9 +2495,9 @@ input, select, textarea {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 36px;
+  font-size: 24px;
   color: white;
-  text-decoration: none;  /* This removes the underline */
+  text-decoration: none !important;  /* This removes the underline */
 }
 
 /* Project Page GitHub Button */
