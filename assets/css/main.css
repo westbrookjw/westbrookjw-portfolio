@@ -2514,14 +2514,25 @@ input, select, textarea {
   margin: 0;
 }
 
+section.main {
+  position: relative; /* This makes absolute children position relative to this box */
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
 .github-icon {
-  font-size: 24px;
-  color: white;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 48px;
+  color: #333;
   text-decoration: none;
+  z-index: 10;
 }
 
 .github-icon:hover {
-  color: #ccc;
+  color: #000;
 }
 
 
