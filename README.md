@@ -102,4 +102,4 @@ You now have a scalable, secure, and fast static website hosted entirely on AWS 
 
 ## 📬 Questions?
 
-Feel free to [contact me](mailto:your.email@example.com) or connect via [GitHub](https://github.com/yourusername).
+Feel free to [contact me](mailto:westbrook.jww@gmail.com) or connect via [GitHub](https://github.com/westbrookjw).
