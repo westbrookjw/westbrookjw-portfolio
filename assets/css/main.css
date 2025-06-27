@@ -2491,6 +2491,17 @@ input, select, textarea {
     	text-align: center;
 }
 
+.home-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 36px;
+  color: white;
+  text-decoration: none;  /* This removes the underline */
+}
+
+
+
 /* List */
 
 	ol {
