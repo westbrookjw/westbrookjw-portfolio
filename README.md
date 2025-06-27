@@ -60,25 +60,11 @@ This tutorial walks through deploying a static website using **Amazon S3** and *
 
 ## 🌍 (Optional) Step 6: Custom Domain with HTTPS
 
-1. Go to **Certificate Manager**
-2. Click **Request** → **Request a public certificate**
-3. Under **Domain names**, enter your domain(s), e.g., `example.com`, `www.example.com`
-4. Submit the request
-
-### 🧾 DNS Validation
-
-1. Go to **Certificate Manager** → your certificate
-2. Copy the provided **CNAME Name** and **Value**
-3. In your DNS provider (e.g., Cloudflare), create a **CNAME record** with the above info
-4. Wait until the certificate is marked **Issued**
-
-### 🔗 Add Domain to CloudFront
-
 1. Go to CloudFront → your distribution → **Settings**
 2. Click **Add a domain**
 3. Enter your domain name
 4. Select the existing certificate or request a new wildcard certificate
-5. Add the provided CNAME record to your DNS
+5. Use the provided CNAME values to create a new CNAME record on your DNS providers website
 6. Validate → Add domain → Wait for propagation
 
 Once completed, your static site will be accessible via your custom domain using **HTTPS**.
