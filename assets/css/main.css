@@ -2447,6 +2447,21 @@ input, select, textarea {
 				object-fit: cover;
 			}
 
+/* Custom */
+
+.custom-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.custom-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%; /* optional: makes it circular */
+}
+
 /* List */
 
 	ol {
@@ -2891,6 +2906,31 @@ input, select, textarea {
 					}
 
 		}
+
+/* Feature Overrides */
+#cta .features {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	align-items: flex-start; /* ensure top alignment */
+	flex-wrap: wrap; /* for responsiveness */
+	text-align: center;
+}
+
+#cta .features li {
+  flex: 1 1 300px;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+#cta .features img {
+ width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%; /* optional if you want circular certs */
+  display: block;
+  margin: 0 auto;
+}
 
 /* Statistics */
 
