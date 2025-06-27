@@ -2447,6 +2447,16 @@ input, select, textarea {
 				object-fit: cover;
 			}
 
+		.image.circular img {
+		width: 150px; /* or any size you want */
+		height: 150px;
+		object-fit: cover;
+		border-radius: 50%;
+		display: block;
+    	margin: 10px auto; /* Adjust value as needed */
+    	text-align: center;
+}
+
 /* Custom */
 
 .custom-icon-wrapper {
