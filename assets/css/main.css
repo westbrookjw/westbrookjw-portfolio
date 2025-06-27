@@ -2514,27 +2514,60 @@ input, select, textarea {
   margin: 0;
 }
 
+/* Ensure the white project box is clean and responsive */
 section.main {
-  position: relative; /* This makes absolute children position relative to this box */
+  position: relative;
   background: white;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin: 1rem auto;
+  max-width: 90%;
 }
 
+/* Keep heading readable and properly spaced */
+section.main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* GitHub icon in top right of the white card */
 .github-icon {
   position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 48px;
+  top: 1rem;
+  right: 1rem;
+  font-size: 36px;
   color: #333;
   text-decoration: none;
-  z-index: 10;
 }
 
 .github-icon:hover {
   color: #000;
 }
 
+/* Paragraph styling for readability */
+section.main p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive typography */
+@media (max-width: 480px) {
+  section.main h2 {
+    font-size: 1.25rem;
+  }
+
+  .github-icon {
+    font-size: 28px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  section.main p {
+    font-size: 0.95rem;
+  }
+}
 
 
 /* List */
