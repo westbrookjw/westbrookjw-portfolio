@@ -39,27 +39,12 @@
 									<i class="fab fa-github" style="font-size: 48px;"></i>
 								</a>
 								</div>
-								<p>This project demonstrates how to deploy a static website using 
-									AWS S3 and CloudFront. The process begins by creating an S3 
-									bucket and enabling static website hosting, specifying 
-									index.html as the homepage and optionally error.html for 
-									error handling. A CloudFront distribution is then configured 
-									to serve content from the S3 bucket, with Origin Access 
-									Control (OAC) enabled to restrict access securely. The 
-									corresponding CloudFront-generated policy is applied 
-									to the S3 bucket’s permissions to allow read access. 
-									To enhance security, public access to the bucket remains 
-									blocked while CloudFront handles content delivery. Once 
-									deployed, the website is accessible via the CloudFront 
-									domain. Additionally, the project includes setting up 
-									a custom domain with HTTPS using AWS Certificate 
-									Manager and DNS configuration through a provider 
-									like Cloudflare. This involves requesting a public 
-									certificate, validating it with CNAME records, and 
-									associating the verified domain with the 
-									CloudFront distribution. The result is a secure, 
-									scalable static site hosted 
-									entirely on AWS infrastructure.</p>
+								<p>This project walks through the process of deploying a secure, high-performance static website 
+									using AWS services. It starts with hosting the site on Amazon S3 and configuring CloudFront 
+									as a content delivery network with Origin Access Control to securely serve files. It also 
+									includes optional steps to set up a custom domain with HTTPS using AWS Certificate Manager 
+									and DNS providers like Cloudflare. This setup ensures your website is scalable, secure, 
+									and accessible via a personalized domain.</p>
 							</section>
 
 					</div>
