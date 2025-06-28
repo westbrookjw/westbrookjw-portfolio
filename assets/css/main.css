@@ -3405,10 +3405,10 @@ section.main h2 {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #ffffff;
+		background-color: #000000;
 		color: #636363;
-		margin: 0 auto;
-		width: 924px;
+		position: absolute;
+		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
 		background-color: #f7f7f7;
@@ -3520,9 +3520,6 @@ section.main h2 {
 				}
 
 		}
-
-/* Nav Custom */
-
 
 /* Main */
 
