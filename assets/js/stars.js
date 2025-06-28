@@ -12,12 +12,12 @@ const canvas = document.getElementById('stars-canvas');
 
   function createStars() {
     stars = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 300; i++) {
       stars.push({
         x: Math.random() * w,
         y: Math.random() * h,
         r: Math.random() * 1.5 + 0.5,
-        d: Math.random() * 0.5 + 0.2
+        d: Math.random() * 0.2 + 0.05
       });
     }
   }
