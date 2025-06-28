@@ -2563,7 +2563,7 @@ section.main h2 {
 
 .project-box {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.25); /* Slight transparency */
+  background-color: rgba(255, 255, 255, 0.5); /* Slight transparency */
   padding: 2rem;
   border-radius: 8px;
   overflow: hidden;
@@ -3407,8 +3407,8 @@ section.main h2 {
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		background-color: #ffffff;
 		color: #636363;
-		position: absolute;
-		width: 64em;
+		margin: 0 auto;
+		width: 924px;
 		max-width: calc(100% - 4em);
 		padding: 1em;
 		background-color: #f7f7f7;
@@ -3520,6 +3520,9 @@ section.main h2 {
 				}
 
 		}
+
+/* Nav Custom */
+
 
 /* Main */
 
