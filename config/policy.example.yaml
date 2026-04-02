@@ -1,0 +1,37 @@
+polling:
+  loop_seconds: 30
+  fastmail_seconds: 60
+  gmail_seconds: 60
+
+quiet_hours:
+  enabled: true
+  start: "22:00"
+  end: "07:00"
+  timezone: "America/New_York"
+  allow_critical: true
+
+notifications:
+  default_channel: "ntfy"
+  enabled_for:
+    - critical
+    - important
+
+rules:
+  vip_senders:
+    - ceo@company.com
+  vip_domains:
+    - important-client.com
+  ignored_senders:
+    - notifications@social.example
+  ignored_domains:
+    - marketing.example
+  always_llm_domains:
+    - unknown-vendor.example
+
+ollama:
+  host: "http://127.0.0.1:11434"
+  model: "llama3.1:8b-instruct"
+  timeout_seconds: 30
+
+sqlite_path: "./state/triage.db"
+log_level: "INFO"

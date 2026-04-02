@@ -1,0 +1,33 @@
+[project]
+name = "local-email-triage-daemon"
+version = "0.1.0"
+description = "Local-first email triage daemon for Fastmail + Gmail with Ollama classification"
+readme = "README_EMAIL_TRIAGE.md"
+requires-python = ">=3.12"
+dependencies = [
+  "httpx>=0.27.0",
+  "pydantic>=2.9.0",
+  "PyYAML>=6.0.2",
+  "structlog>=24.4.0",
+  "google-api-python-client>=2.154.0",
+  "google-auth>=2.36.0",
+  "google-auth-oauthlib>=1.2.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.13.0",
+  "ruff>=0.7.0",
+]
+
+[tool.ruff]
+line-length = 100
+
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_any_generics = true
